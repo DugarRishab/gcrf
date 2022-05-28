@@ -15,7 +15,7 @@ function App() {
 				{/* <AppBar></AppBar> */}
 				<ResponsiveAppBar></ResponsiveAppBar>
 
-				{/* <AllRoutes></AllRoutes> */}
+				<AllRoutes></AllRoutes>
 			</Router>
 		</div>
 	);

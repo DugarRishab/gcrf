@@ -7,6 +7,11 @@
 	--accent--filter: invert(68%) sepia(69%) saturate(1418%) hue-rotate(360deg) brightness(102%) contrast(99%);
 	--blue: rgb(66, 133, 244);
 }
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -15,6 +20,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: var(--bg);
+	overflow-x: hidden;
 }
 
 code {
