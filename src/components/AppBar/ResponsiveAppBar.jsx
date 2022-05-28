@@ -11,11 +11,11 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import { SwipeableDrawer } from "@mui/material";
 // import AdbIcon from "@mui/icons-material/Adb";
 import logo from "../../res/img/Google_Cloud_Storage_logo.png";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import './ResponsiveAppBar.css';
-import { SwipeableDrawer } from "@mui/material";
 
 const pages = ["Home", "Report", "Leaderboard"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -58,8 +58,10 @@ const ResponsiveAppBar = () => {
 			position="static"
 			sx={{
 				width: "100vw",
+				maxWidth: "100vw",
 				background: "var(--bg--light)",
 				backdropFilter: "blur(40px)",
+				boxSizing: "border-box"
 			}}
 			className="app-bar"
 		>
