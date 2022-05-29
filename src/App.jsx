@@ -4,18 +4,29 @@ import { BrowserRouter as Router } from "react-router-dom";
 import MediaQuery from "react-responsive";
 
 import Navbar from "./components/Navbar/Navbar";
-import { Drawer, SwipeableDrawer } from "@mui/material";
+import { createTheme, Drawer, SwipeableDrawer, ThemeProvider } from "@mui/material";
 import ResponsiveAppBar from "./components/AppBar/ResponsiveAppBar";
+import AppBar2 from "./components/AppBar2/AppBar2";
+
 
 function App() {
+	const theme = createTheme({
+		colors: {
+			red: "rgb(219, 68, 55)",
+			blue: "rgb(66, 133, 244)",
+		},
+	});
 	return (
 		<div className="App">
 			<Router>
-				{/* <Navbar></Navbar> */}
-				{/* <AppBar></AppBar> */}
-				<ResponsiveAppBar></ResponsiveAppBar>
+				<ThemeProvider theme={theme}>
+					{/* <Navbar></Navbar> */}
+					{/* <AppBar></AppBar> */}
+					{/* <ResponsiveAppBar></ResponsiveAppBar> */}
+					<AppBar2></AppBar2>
 
-				<AllRoutes></AllRoutes>
+					<AllRoutes></AllRoutes>
+				</ThemeProvider>
 			</Router>
 		</div>
 	);

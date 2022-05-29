@@ -6,6 +6,8 @@
 	--accent: #fab601;
 	--accent--filter: invert(68%) sepia(69%) saturate(1418%) hue-rotate(360deg) brightness(102%) contrast(99%);
 	--blue: rgb(66, 133, 244);
+	--red: rgb(219, 68, 55);
+	--green: rgb(15, 157, 88);
 }
 *{
 	box-sizing: border-box;
@@ -26,4 +28,7 @@ body {
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
+}
+input{
+	color: white !important;
 }
