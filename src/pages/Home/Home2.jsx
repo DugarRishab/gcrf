@@ -220,13 +220,19 @@ const Home2 = () => {
 					sx={{
 						border: "0px solid blue",
 						width: "100%",
+						
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "center",
+						justifyContent: "flex-start"
+
 					}}
 				>
 					<img
 						src={mainLogo}
 						alt=""
 						style={{
-							height: "200px",
+							height: "250px",
 							margin: "auto",
 							border: "0px solid green",
 						}}
