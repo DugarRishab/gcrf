@@ -11,27 +11,24 @@ import { hover } from "@testing-library/user-event/dist/hover";
 const Report = () => {
 	const [data, setData] = useState([]);
 	const [getData, setGetData] = useState([]);
+	const [email, setEmail] = useState(null);
 	
-	const [report, setReport] = useState({
-		name: "Niket Bahety",
-		email: "niketbahety@gmail.com",
-		institution:
-			" Indian Institute of Engineering Science and Technology, Shibpur.",
-		quicklabsProfile:
-			"https://www.cloudskillsboost.google/public_profiles/9938caa6-2116-4bbc-95d7-bfd1933103ed",
-		status: "All Good",
-		quests: 3,
-		skillBadge: 1,
-		milestones: [100, 50, 75, 0],
-	});
+	const [report, setReport] = useState();
 
-	const handleOnClick = async () => {
-		const res = await getReport();
-		setData(res.data);
-		console.log(res.data);
+	const handleOnSUbmit = async () => {
+		const res = await getReport(email);
+		setReport(res.data.data.user);
+		console.log(res.data.data.user);
 	};
 	const handleClearReport = () => {
 		setReport(null);
+	}
+	const handleChange = (e) => {
+		setEmail(e.target.value);
+	}
+	const handleOnCancel = () => {
+		setEmail("");
+		console.log("cancel");
 	}
 
 	return (
@@ -40,6 +37,7 @@ const Report = () => {
 				border: "0px solid green",
 				width: "100vw",
 				mt: "80px",
+				overflowX: "hidden",
 				color: "white",
 			}}
 		>
@@ -54,6 +52,7 @@ const Report = () => {
 						// display: { xs: "none", sm: "flex" },
 						// padding: "20px",
 						px: "20px",
+						ml: {xs: "10px", md: "50px"}
 						// overflow: "hidden",
 					}}
 				>
@@ -63,7 +62,7 @@ const Report = () => {
 							position: "absolute",
 							// right: { xs: "-160%", md: "-40%" },
 							right: 0,
-							transform: "translateX(20%)",
+							transform: {xs: "translateX(30%)", md: "translateX(0%)"},
 							top: "30px",
 							zIndex: "-100",
 						}}
@@ -119,7 +118,7 @@ const Report = () => {
 					</Stack>
 					<Box
 						sx={{
-							width: { xs: "100%", md: "60%" },
+							width: { xs: "95%", md: "60%" },
 							border: "1px solid rgb(150, 150, 150)",
 							textAlign: "left",
 							borderRadius: "15px",
@@ -217,7 +216,7 @@ const Report = () => {
 								fontWeight="400"
 								color="var(--green)"
 							>
-								<a href={report.quicklabsProfile}>
+								<a href={report.profile}>
 									<Button
 										type="text"
 										sx={{
@@ -359,6 +358,8 @@ const Report = () => {
 							type={"email"}
 							fullWidth
 							variant="outlined"
+							value={email}
+							onChange={handleChange}
 						></TextField>
 						<Stack
 							direction="row"
@@ -386,7 +387,8 @@ const Report = () => {
 									textDecoration: "none",
 									// width: "100%",
 									// height: "100%",
-								}}
+									}}
+									onClick={handleOnSUbmit}
 							>
 								Get you Report
 							</Button>
@@ -405,7 +407,8 @@ const Report = () => {
 									textDecoration: "none",
 									// width: "100%",
 									// height: "100%",
-								}}
+									}}
+									onClick= {handleOnCancel}
 							>
 								Cancel
 							</Button>

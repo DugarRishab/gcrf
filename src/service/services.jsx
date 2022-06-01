@@ -2,9 +2,9 @@ import axios from 'axios';
 
 const api = axios.create({
 			// baseURL: "https://doubt-overflow-api.herokuapp.com/api/v1",
-			baseURL: "https://jsonplaceholder.typicode.com",
+			baseURL: "http://localhost:8000/api/v1",
 			// baseURL: "https://track-it-v2.herokuapp.com/api/v2",
 		});
 
-export const getReport = () => api.get('/users');
-export const getTodo = () => api.get("/posts");
+export const getReport = (email) => api.get(`/${email}`);
+export const getLeaderboard = () => api.get("/");
