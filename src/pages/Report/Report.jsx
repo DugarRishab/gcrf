@@ -274,7 +274,8 @@ const Report = () => {
 					sx={{
 						width: "100vw",
 						// overflowX: "hidden",
-						border: "0px solid red",
+						border: "0px solid green",
+						minHeight: "100vh",
 						position: "relative",
 						// display: { xs: "none", sm: "flex" },
 						padding: "20px",
@@ -283,7 +284,7 @@ const Report = () => {
 				>
 					<Box
 						sx={{
-							border: "0px solid red",
+							border: "0px solid yellow",
 							position: "absolute",
 							// right: { xs: "-160%", md: "-40%" },
 							right: 0,
@@ -318,7 +319,7 @@ const Report = () => {
 					</Box>
 					<Box
 						sx={{
-							width: "60%",
+							width: {xs: "95%", md: "60%"},
 							border: "1px solid rgb(150, 150, 150)",
 							textAlign: "left",
 							borderRadius: "15px",

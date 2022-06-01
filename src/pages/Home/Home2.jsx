@@ -35,14 +35,7 @@ const Home2 = () => {
 			url: "https://arnabsen.bio.link/",
 			description:
 				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, minima eligendi nostrum quasi, laboriosam asperiores a commodi molestias optio culpa libero? Ipsa nulla ea fugiat magnam vero quae optio distinctio?",
-		},
-		{
-			name: "Arnab Sen",
-			image: arnabImg,
-			url: "https://arnabsen.bio.link/",
-			description:
-				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, minima eligendi nostrum quasi, laboriosam asperiores a commodi molestias optio culpa libero? Ipsa nulla ea fugiat magnam vero quae optio distinctio?",
-		},
+		}
 	];
 	return (
 		<Box
@@ -234,16 +227,31 @@ const Home2 = () => {
 						alt=""
 						style={{
 							height: "200px",
+							margin: "auto",
+							border: "0px solid green",
 						}}
 					/>
-					<Typography variant={"h4"} component="p" fontWeight={"700"}>
+					<Typography
+						variant={"h4"}
+						component="p"
+						fontWeight={"700"}
+						margin="auto"
+						textAlign={"center"}
+					>
 						GoogleCloudReady Facilitator Program
 					</Typography>
-					<Container>
+					<Container
+						sx={{
+							border: "0px solid green",
+							margin: "auto",
+						}}
+					>
 						<a
 							href="https://www.iiests.ac.in/"
 							style={{
 								textDecoration: "none",
+								border: "0px solid green",
+								margin: "auto",
 							}}
 						>
 							<Button
@@ -273,36 +281,41 @@ const Home2 = () => {
 							mt: "40px",
 						}}
 					>
-						<Button
-							variant="contained"
-							sx={{
-								py: "10px",
-								color: "white",
-								display: "flex",
-								px: "20px",
-								borderRadius: "25px",
-								textDecoration: "none",
-								// width: "100%",
-								// height: "100%",
-							}}
-						>
-							Get you Report
-						</Button>
-						<Button
-							variant="outlined"
-							sx={{
-								py: "10px",
-								color: "white",
-								display: "flex",
-								px: "20px",
-								borderRadius: "25px",
-								textDecoration: "none",
-								// width: "100%",
-								// height: "100%",
-							}}
-						>
-							Leaderboard
-						</Button>
+						<Link to="/report">
+							<Button
+								variant="contained"
+								sx={{
+									py: "10px",
+									color: "white",
+									display: "flex",
+									px: "20px",
+									borderRadius: "25px",
+									textDecoration: "none",
+									// width: "100%",
+									// height: "100%",
+								}}
+							>
+								Get you Report
+							</Button>
+						</Link>
+
+						<Link to="/leaderboard">
+							<Button
+								variant="outlined"
+								sx={{
+									py: "10px",
+									color: "white",
+									display: "flex",
+									px: "20px",
+									borderRadius: "25px",
+									textDecoration: "none",
+									// width: "100%",
+									// height: "100%",
+								}}
+							>
+								Leaderboard
+							</Button>
+						</Link>
 					</Stack>
 				</Box>
 			</Stack>
