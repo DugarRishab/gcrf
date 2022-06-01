@@ -15,7 +15,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { Card, Chip, Stack, SwipeableDrawer } from "@mui/material";
 import mainLogo from "./../../res/img/banner.png";
 import { Link } from "react-router-dom";
-import jyotiImg from "../../res/img/jyoti.png";
+import jyotiImg from "../../res/img/jyoti2.jpg";
 import arnabImg from "../../res/img/arnab.jpeg";
 
 const Home = () => {

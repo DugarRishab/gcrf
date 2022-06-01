@@ -15,7 +15,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { Card, Chip, Divider, Stack, SwipeableDrawer } from "@mui/material";
 import mainLogo from "./../../res/img/banner_large.png";
 import { Link } from "react-router-dom";
-import jyotiImg from "../../res/img/jyoti.png";
+import jyotiImg from "../../res/img/jyoti2.jpg";
 import arnabImg from "../../res/img/arnab.jpeg";
 import googleLogo from "../../res/img/google.png";
 import codeIIESTLogo from "../../res/img/codeIIEST.png";
@@ -131,36 +131,40 @@ const Home2 = () => {
 						</Button>
 					</a>
 					<Stack direction="row" spacing="20px">
-						<Button
-							variant="contained"
-							sx={{
-								py: "10px",
-								color: "white",
-								display: "flex",
-								px: "20px",
-								borderRadius: "25px",
-								textDecoration: "none",
-								// width: "100%",
-								// height: "100%",
-							}}
-						>
-							Get you Report
-						</Button>
-						<Button
-							variant="outlined"
-							sx={{
-								py: "10px",
-								color: "white",
-								display: "flex",
-								px: "20px",
-								borderRadius: "25px",
-								textDecoration: "none",
-								// width: "100%",
-								// height: "100%",
-							}}
-						>
-							Leaderboard
-						</Button>
+						<Link to="/report">
+							<Button
+								variant="contained"
+								sx={{
+									py: "10px",
+									color: "white",
+									display: "flex",
+									px: "20px",
+									borderRadius: "25px",
+									textDecoration: "none",
+									// width: "100%",
+									// height: "100%",
+								}}
+							>
+								Get you Report
+							</Button>
+						</Link>
+						<Link to="/leaderboard">
+							<Button
+								variant="outlined"
+								sx={{
+									py: "10px",
+									color: "white",
+									display: "flex",
+									px: "20px",
+									borderRadius: "25px",
+									textDecoration: "none",
+									// width: "100%",
+									// height: "100%",
+								}}
+							>
+								Leaderboard
+							</Button>
+						</Link>
 					</Stack>
 				</Box>
 				<Box
