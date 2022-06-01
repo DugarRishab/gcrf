@@ -16,7 +16,6 @@ import { Card, Chip, Divider, Stack, SwipeableDrawer } from "@mui/material";
 import axios from "axios";
 import { getLeaderboard, getReport, getTodo } from "../../service/services";
 import leaderBoardImg from "../../res/img/trophy2.png";
-import usersData from "../../res/data/users.json";
 
 const LeaderBoard = () => {
 	const [users, setUsers] = useState(null);
