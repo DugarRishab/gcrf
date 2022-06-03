@@ -288,7 +288,7 @@ const Report = () => {
 							position: "absolute",
 							// right: { xs: "-160%", md: "-40%" },
 							right: 0,
-							transform: "translateX(0%)",
+							transform: "translateX(30%)",
 							top: "30px",
 							zIndex: "-100",
 						}}
@@ -325,6 +325,7 @@ const Report = () => {
 							borderRadius: "15px",
 							padding: "20px",
 							bgcolor: "var(--bg--light)",
+							backdropFilter: "blur(40px)",
 							mt: "50px",
 							display: "flex",
 							flexDirection: "column",

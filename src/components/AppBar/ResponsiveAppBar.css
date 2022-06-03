@@ -1,17 +1,2 @@
-a.nav-link,
-a.menu-item {
-	text-decoration: none;
-}
-a.nav-link.active{
-	background-color: var(--bg--light);
-	border-bottom: 2px solid var(--blue);
-}
-a.menu-item.active {
-	background-color: var(--bg--light);
-	border-right: 2px solid var(--blue);
-}
-a{
-	text-decoration: none;
-}
 
 
