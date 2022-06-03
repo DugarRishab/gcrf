@@ -15,7 +15,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { Card, Chip, Divider, Stack, SwipeableDrawer } from "@mui/material";
 import mainLogo from "./../../res/img/banner_large.png";
 import { Link } from "react-router-dom";
-import jyotiImg from "../../res/img/jyoti2.jpg";
+import jyotiImg from "../../res/img/jyoti3.jpg";
 import arnabImg from "../../res/img/arnab.jpeg";
 import googleLogo from "../../res/img/google.png";
 import codeIIESTLogo from "../../res/img/codeIIEST.png";
@@ -25,17 +25,19 @@ const Home2 = () => {
 		{
 			name: "Jyoti Jaiswal",
 			image: jyotiImg,
-			url: "https://www.linkedin.com/in/jyoti-jaiswal-she-her-29aab61b8/",
+			linkedIn:
+				"https://www.linkedin.com/in/jyoti-jaiswal-she-her-29aab61b8/",
+			twitter: "https://twitter.com/DevManustweets",
 			description:
-				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, minima eligendi nostrum quasi, laboriosam asperiores a commodi molestias optio culpa libero? Ipsa nulla ea fugiat magnam vero quae optio distinctio?",
+				"Hey, I am Jyoti Jaiswal. I like to introduce myself as a good observer, listener and reader. I am passionate about technology and human pyschology. I like to contribute in tech-communities. Besides that, I love cats more than I love dogs. Let's connect with me on twitter.",
 		},
 		{
 			name: "Arnab Sen",
 			image: arnabImg,
 			url: "https://arnabsen.bio.link/",
 			description:
-				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, minima eligendi nostrum quasi, laboriosam asperiores a commodi molestias optio culpa libero? Ipsa nulla ea fugiat magnam vero quae optio distinctio?",
-		}
+				"I am a Software Developer with experience in Web Development, Automation, and Content Writing. For the past 2 years, I have worked around an immense variety of technologies and frameworks such as React, Vue in Frontend and Node, Flask, Rails in the Backend. ",
+		},
 	];
 	return (
 		<Box
@@ -220,12 +222,11 @@ const Home2 = () => {
 					sx={{
 						border: "0px solid blue",
 						width: "100%",
-						
+
 						display: "flex",
 						flexDirection: "column",
 						alignItems: "center",
-						justifyContent: "flex-start"
-
+						justifyContent: "flex-start",
 					}}
 				>
 					<img
@@ -359,18 +360,30 @@ const Home2 = () => {
 					<Typography
 						variant="body1"
 						component={"p"}
-						mt="10px"
+						mt="15px"
 						color="rgb(180, 180, 180)"
 					>
 						The GoogleCloudReady Facilitator program will provide
 						you an opportunity to kickstart your career in cloud and
 						get hands on practice on Google Cloud - the tool that
-						powers apps like Google Search, Gmail and YouTube. Along
-						the way, you will learn & practice concepts like
+						powers apps like Google Search, Gmail and YouTube.
+						<br></br>
+						<br></br>
+						Along the way, you will learn & practice concepts like
 						computing, application development, big data & machine
 						learning using cloud & if you get stuck, you will have
 						your "Facilitators" who are specially trained on Google
-						Cloud to help. 😎
+						Cloud to help. 😎 Check out the official{" "}
+						<a
+							href="https://events.withgoogle.com/googlecloudready-facilitator-program/"
+							style={{
+								textDecoration: "underline",
+								// color: "white"
+							}}
+						>
+							website
+						</a>{" "}
+						to know more about this program
 					</Typography>
 				</Box>
 				<Box
@@ -397,7 +410,6 @@ const Home2 = () => {
 							flexFlow: "row wrap",
 							mt: "20px",
 							// border: "0px solid green",
-							
 						}}
 					>
 						{facilitators.map((user) => (
@@ -443,17 +455,43 @@ const Home2 = () => {
 									) : null}
 								</CardContent>
 								<CardActions>
-									<a href={user.url}>
-										<IconButton
-											sx={{
-												color: "white",
-											}}
-										>
-											<span class="material-icons">
-												link
-											</span>
-										</IconButton>
-									</a>
+									{user.url ? (
+										<a href={user.url}>
+											<IconButton
+												sx={{
+													color: "white",
+												}}
+											>
+												<span class="material-icons">
+													link
+												</span>
+											</IconButton>
+										</a>
+									) : null}
+									{user.twitter ? (
+										<a href={user.url}>
+											<IconButton
+												sx={{
+													color: "white",
+													fontSize: "20px",
+												}}
+											>
+												<i class="fa-brands fa-twitter"></i>
+											</IconButton>
+										</a>
+									) : null}
+									{user.linkedIn ? (
+										<a href={user.linkedIn}>
+											<IconButton
+												sx={{
+													color: "white",
+													fontSize: "20px",
+												}}
+											>
+												<i class="fa-brands fa-linkedin-in"></i>
+											</IconButton>
+										</a>
+									) : null}
 								</CardActions>
 							</Card>
 						))}

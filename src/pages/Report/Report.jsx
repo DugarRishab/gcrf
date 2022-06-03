@@ -52,7 +52,7 @@ const Report = () => {
 						// display: { xs: "none", sm: "flex" },
 						// padding: "20px",
 						px: "20px",
-						ml: {xs: "10px", md: "50px"}
+						ml: { xs: "10px", md: "50px" },
 						// overflow: "hidden",
 					}}
 				>
@@ -62,7 +62,10 @@ const Report = () => {
 							position: "absolute",
 							// right: { xs: "-160%", md: "-40%" },
 							right: 0,
-							transform: {xs: "translateX(30%)", md: "translateX(0%)"},
+							transform: {
+								xs: "translateX(30%)",
+								md: "translateX(0%)",
+							},
 							top: "30px",
 							zIndex: "-100",
 						}}
@@ -76,14 +79,14 @@ const Report = () => {
 						/>
 					</Box>
 					<Stack
-						direction={{xs: "column", md: "row"}}
+						direction={{ xs: "column", md: "row" }}
 						sx={{
-							width: {xs: "100%", md: "60%"},
+							width: { xs: "100%", md: "60%" },
 							border: "0px solid red",
 							display: "flex",
 							// flexDirection: {xs: "row", md: "column"},
-							alignItems:{xs: "flex-start", md: "center"},
-							justifyContent: "space-between"
+							alignItems: { xs: "flex-start", md: "center" },
+							justifyContent: "space-between",
 						}}
 					>
 						<Typography
@@ -110,7 +113,7 @@ const Report = () => {
 								textDecoration: "none",
 								width: "fit-content",
 								height: "100%",
-								mt: "10px"
+								mt: "10px",
 							}}
 						>
 							Get new Report
@@ -279,6 +282,7 @@ const Report = () => {
 						position: "relative",
 						// display: { xs: "none", sm: "flex" },
 						padding: "20px",
+						ml: { xs: "10px", md: "50px" },
 						// overflow: "hidden",
 					}}
 				>
@@ -288,7 +292,10 @@ const Report = () => {
 							position: "absolute",
 							// right: { xs: "-160%", md: "-40%" },
 							right: 0,
-							transform: "translateX(30%)",
+							transform: {
+								xs: "translateX(30%)",
+								md: "translateX(0%)",
+							},
 							top: "30px",
 							zIndex: "-100",
 						}}
@@ -319,7 +326,7 @@ const Report = () => {
 					</Box>
 					<Box
 						sx={{
-							width: {xs: "95%", md: "60%"},
+							width: { xs: "95%", md: "60%" },
 							border: "1px solid rgb(150, 150, 150)",
 							textAlign: "left",
 							borderRadius: "15px",
@@ -389,8 +396,8 @@ const Report = () => {
 									textDecoration: "none",
 									// width: "100%",
 									// height: "100%",
-									}}
-									onClick={handleOnSUbmit}
+								}}
+								onClick={handleOnSUbmit}
 							>
 								Get you Report
 							</Button>
@@ -409,8 +416,8 @@ const Report = () => {
 									textDecoration: "none",
 									// width: "100%",
 									// height: "100%",
-									}}
-									onClick= {handleOnCancel}
+								}}
+								onClick={handleOnCancel}
 							>
 								Cancel
 							</Button>
