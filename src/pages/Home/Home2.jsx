@@ -386,16 +386,18 @@ const Home2 = () => {
 						Facilitators:
 					</Typography>
 					<Stack
+						className="no-scrollbar"
 						direction={{ xs: "row", md: "row" }}
 						sx={{
-							overflowX: "scroll",
+							// overflowX: "scroll",
 							width: "100%",
 							display: "flex",
 							justifyContent: { xs: "center", md: "flex-start" },
 							alignItems: "center",
 							flexFlow: "row wrap",
 							mt: "20px",
-							border: "0px solid green",
+							// border: "0px solid green",
+							
 						}}
 					>
 						{facilitators.map((user) => (

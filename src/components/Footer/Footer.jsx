@@ -10,18 +10,22 @@ const Footer = () => {
 				border: "0px solid red",
 				width: "100vw",
 				height: "300px",
-				p: "20px",
+
 				boxSizing: "border-box",
+				display: "flex",
+				flexDirection: "column",
+				alignIems: "center",
+				justifyContent: "flex-start",
 			}}
 		>
 			<Divider
 				orientation="horizontal"
 				sx={{
 					bgcolor: "rgb(180, 180, 180)",
-					width: "95vw",
+					width: "calc(100% - 00px)",
 				}}
 				flexItem
-				variant="middle"
+				
 			></Divider>
 			<Stack
 				direction="column"
@@ -30,6 +34,7 @@ const Footer = () => {
 					border: "0px solid red",
 					color: "white",
 					mt: "20px",
+					p: "20px",
 				}}
 				spacing="40px"
 			>
@@ -99,7 +104,10 @@ const Footer = () => {
 					>
 						<i class="fa-brands fa-facebook"></i>
 					</a>
-					<a className="quick-link" href="mailto:codeiiest.iiest@gmail.com">
+					<a
+						className="quick-link"
+						href="mailto:codeiiest.iiest@gmail.com"
+					>
 						<i class="fa-solid fa-envelope"></i>
 					</a>
 				</Stack>

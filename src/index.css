@@ -58,3 +58,7 @@ a:hover {
 .quick-link{
 	transition: 0.5s all;
 }
+.no-scrollbar ::-webkit-scrollbar{
+	display: hidden;
+	border: "2px solid red"
+}
