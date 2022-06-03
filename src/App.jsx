@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { createTheme, Drawer, SwipeableDrawer, ThemeProvider } from "@mui/material";
 import ResponsiveAppBar from "./components/AppBar/ResponsiveAppBar";
 import AppBar2 from "./components/AppBar2/AppBar2";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
 					{/* <ResponsiveAppBar></ResponsiveAppBar> */}
 					<AppBar2></AppBar2>
 
-					<AllRoutes></AllRoutes>
+					<AllRoutes></AllRoutes> 
+					<Footer></Footer>
 				</ThemeProvider>
 			</Router>
 		</div>
