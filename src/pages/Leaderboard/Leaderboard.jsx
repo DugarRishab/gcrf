@@ -41,10 +41,9 @@ const LeaderBoard = () => {
 				mt: "80px",
 				// overflowX: "hidden",
 				color: "white",
-				position: "relative"
+				position: "relative",
 			}}
 		>
-			
 			<Stack
 				direction="column"
 				sx={{
@@ -142,111 +141,146 @@ const LeaderBoard = () => {
 					}}
 				>
 					<Typography variant="h5">Milestone #4</Typography>
-					{users !== null
-						? users
-								.filter(
-									(user) =>
-										user.quests >= 40 &&
-										// user.quests < 20 &&
-										user.badges >= 20
-									// user.badges < 10
-								)
-								.map((user) => (
-									<Box
-										sx={{
-											p: "5px",
-											textIndent: "10px",
-											border: "1px solid rgb(150, 150, 150, 0.5)",
-											borderRadius: "5px",
-											my: "5px",
-											bgcolor: "var(--bg)",
-										}}
-									>
-										{user.name}
-									</Box>
-								))
-						: null}
+					<Box
+						className="no-scrollbar"
+						sx={{
+							maxHeight: "200px",
+							overflowY: "",
+						}}
+					>
+						{users !== null
+							? users
+									.filter(
+										(user) =>
+											user.quests >= 40 &&
+											// user.quests < 20 &&
+											user.badges >= 20
+										// user.badges < 10
+									)
+									.map((user) => (
+										<Box
+											sx={{
+												p: "5px",
+												textIndent: "10px",
+												border: "1px solid rgb(150, 150, 150, 0.5)",
+												borderRadius: "5px",
+												my: "5px",
+												bgcolor: "var(--bg)",
+											}}
+										>
+											{user.name}
+										</Box>
+									))
+							: null}
+					</Box>
+
 					<Typography mt="15px" variant="h5">
 						Milestone #3
 					</Typography>
-					{users !== null
-						? users
-								.filter(
-									(user) =>
-										user.quests >= 30 &&
-										// user.quests < 40 &&
-										user.badges >= 15
-									// user.badges < 10
-								)
-								.map((user) => (
-									<Box
-										sx={{
-											p: "5px",
-											textIndent: "10px",
-											border: "1px solid rgb(150, 150, 150, 0.5)",
-											borderRadius: "5px",
-											my: "5px",
-											bgcolor: "var(--bg)",
-										}}
-									>
-										{user.name}
-									</Box>
-								))
-						: null}
+					<Box
+						className="no-scrollbar"
+						sx={{
+							maxHeight: "200px",
+							overflowY: "",
+						}}
+					>
+						{users !== null
+							? users
+									.filter(
+										(user) =>
+											user.quests >= 30 &&
+											// user.quests < 40 &&
+											user.badges >= 15
+										// user.badges < 10
+									)
+									.map((user) => (
+										<Box
+											sx={{
+												p: "5px",
+												textIndent: "10px",
+												border: "1px solid rgb(150, 150, 150, 0.5)",
+												borderRadius: "5px",
+												my: "5px",
+												bgcolor: "var(--bg)",
+											}}
+										>
+											{user.name}
+										</Box>
+									))
+							: null}
+					</Box>
+
 					<Typography mt="15px" variant="h5">
 						Milestone #2
 					</Typography>
-					{users !== null
-						? users
-								.filter(
-									(user) =>
-										user.quests >= 20 &&
-										// user.quests < 30 &&
-										user.badges >= 10
-									// user.badges < 15
-								)
-								.map((user) => (
-									<Box
-										sx={{
-											p: "5px",
-											textIndent: "10px",
-											border: "1px solid rgb(150, 150, 150, 0.5)",
-											borderRadius: "5px",
-											my: "5px",
-											bgcolor: "var(--bg)",
-										}}
-									>
-										{user.name}
-									</Box>
-								))
-						: null}
+					<Box
+						className="no-scrollbar"
+						sx={{
+							maxHeight: "200px",
+							overflowY: "",
+						}}
+					>
+						{users !== null
+							? users
+									.filter(
+										(user) =>
+											user.quests >= 20 &&
+											// user.quests < 30 &&
+											user.badges >= 10
+										// user.badges < 15
+									)
+									.map((user) => (
+										<Box
+											sx={{
+												p: "5px",
+												textIndent: "10px",
+												border: "1px solid rgb(150, 150, 150, 0.5)",
+												borderRadius: "5px",
+												my: "5px",
+												bgcolor: "var(--bg)",
+											}}
+										>
+											{user.name}
+										</Box>
+									))
+							: null}
+					</Box>
+
 					<Typography mt="15px" variant="h5">
 						Milestone #1
 					</Typography>
-					{users !== null
-						? users
-								.filter(
-									(user) =>
-										user.quests >= 10 &&
-										// user.quests < 20 &&
-										user.badges >= 5
-									// user.badges < 10
-								)
-								.map((user) => (
-									<Box
-										sx={{
-											p: "5px",
-											textIndent: "10px",
-											border: "1px solid rgb(150, 150, 150, 0.5)",
-											borderRadius: "5px",
-											my: "5px",
-											bgcolor: "var(--bg)",
-										}}
-									>
-										{user.name}
-									</Box>
-								))
-						: null}
+					<Box
+						className="no-scrollbar"
+						sx={{
+							maxHeight: "200px",
+							overflowY: "scroll",
+						}}
+					>
+						{users !== null
+							? users
+									.filter(
+										(user) =>
+											user.quests >= 10 &&
+											// user.quests < 20 &&
+											user.badges >= 5
+										// user.badges < 10
+									)
+									.map((user) => (
+										<Box
+											sx={{
+												p: "5px",
+												textIndent: "10px",
+												border: "1px solid rgb(150, 150, 150, 0.5)",
+												borderRadius: "5px",
+												my: "5px",
+												bgcolor: "var(--bg)",
+											}}
+										>
+											{user.name}
+										</Box>
+									))
+							: null}
+					</Box>
 				</Stack>
 			</Stack>
 		</Box>

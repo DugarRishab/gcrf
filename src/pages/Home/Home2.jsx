@@ -459,7 +459,7 @@ const Home2 = () => {
 										<a href={user.url}>
 											<IconButton
 												sx={{
-													color: "white",
+													color: "inherit",
 												}}
 											>
 												<span class="material-icons">
@@ -469,10 +469,11 @@ const Home2 = () => {
 										</a>
 									) : null}
 									{user.twitter ? (
-										<a href={user.url}>
+										<a href={user.twitter}>
 											<IconButton
 												sx={{
-													color: "white",
+													// color: "white",
+													color: "inherit",
 													fontSize: "20px",
 												}}
 											>
@@ -484,7 +485,7 @@ const Home2 = () => {
 										<a href={user.linkedIn}>
 											<IconButton
 												sx={{
-													color: "white",
+													color: "inherit",
 													fontSize: "20px",
 												}}
 											>

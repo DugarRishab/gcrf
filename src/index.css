@@ -60,7 +60,22 @@ a:hover {
 	transition: 0.5s all;
 	color: rgb(150, 150, 150);
 }
-.no-scrollbar ::-webkit-scrollbar{
-	display: hidden;
-	border: "2px solid red"
+.no-scrollbar{
+	padding-right: 5px;
+}
+.no-scrollbar::-webkit-scrollbar{
+	/* display: none !important; */
+	/* border: 2px solid red; */
+	width: 5px;
+	background-color: transparent;
+	margin-left: 5px;
+	padding: 5px;
+	border: 0px solid red
+}
+::-webkit-scrollbar-thumb{
+	background-color: rgba(255, 255, 255, 0.258);
+	border-radius: 25px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(255, 255, 255, 0.46);
 }
