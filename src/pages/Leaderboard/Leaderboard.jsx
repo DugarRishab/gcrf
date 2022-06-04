@@ -16,6 +16,7 @@ import { Card, Chip, Divider, Stack, SwipeableDrawer } from "@mui/material";
 import axios from "axios";
 import { getLeaderboard, getReport, getTodo } from "../../service/services";
 import leaderBoardImg from "../../res/img/trophy2.png";
+import { alert } from "../../components/CustomAlert/alert";
 
 const LeaderBoard = () => {
 	const [users, setUsers] = useState(null);
@@ -27,7 +28,8 @@ const LeaderBoard = () => {
 				const res = await getLeaderboard();
 				setUsers(res.data.data.users);
 			} catch (err) {
-				console.log(err);
+				console.log(err.response);
+				alert({ message: err.response.data.message, type: "error" });
 			}
 		}
 		getUsers();

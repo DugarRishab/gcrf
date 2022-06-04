@@ -8,6 +8,7 @@ import { createTheme, Drawer, SwipeableDrawer, ThemeProvider } from "@mui/materi
 import ResponsiveAppBar from "./components/AppBar/ResponsiveAppBar";
 import AppBar2 from "./components/AppBar2/AppBar2";
 import Footer from "./components/Footer/Footer";
+import "./components/CustomAlert/CustomAlert.css";
 
 
 function App() {

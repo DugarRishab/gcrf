@@ -3,10 +3,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Box from "@mui/material/Box";
 import { Card, Chip, Divider, Stack, SwipeableDrawer } from "@mui/material";
+import validator from "validator"
 
 import { getReport } from "../../service/services";
 import reportLogo from "../../res/img/report1.png";
-import { hover } from "@testing-library/user-event/dist/hover";
+import { alert } from "../../components/CustomAlert/alert";
 
 const Report = () => {
 	const [data, setData] = useState([]);
@@ -16,9 +17,23 @@ const Report = () => {
 	const [report, setReport] = useState();
 
 	const handleOnSUbmit = async () => {
-		const res = await getReport(email);
-		setReport(res.data.data.user);
-		console.log(res.data.data.user);
+		try {
+			if (validator.isEmail(email)) {
+				const res = await getReport(email);
+				setReport(res.data.data.user);
+				console.log(res.data.data.user);
+			}
+			else {
+				alert({ message: `Please enter a valid email`, type: "error" });
+			}
+			
+			
+		}
+		catch (err) {
+			console.log(err.response);
+			alert({ message: err.response.data.message, type: "error" });
+		}
+		
 	};
 	const handleClearReport = () => {
 		setReport(null);

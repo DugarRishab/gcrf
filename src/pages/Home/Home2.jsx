@@ -20,6 +20,7 @@ import arnabImg from "../../res/img/arnab.jpeg";
 import googleLogo from "../../res/img/google.png";
 import codeIIESTLogo from "../../res/img/codeIIEST.png";
 import { textAlign } from "@mui/system";
+
 const Home2 = () => {
 	const facilitators = [
 		{
