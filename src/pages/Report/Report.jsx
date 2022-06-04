@@ -227,7 +227,7 @@ const Report = () => {
 							}}
 						>
 							<Typography variant="" fontWeight="600">
-								Quicklabs:{" "}
+								Qwicklabs:{" "}
 							</Typography>
 							<Typography
 								variant=""

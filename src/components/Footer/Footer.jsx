@@ -25,7 +25,6 @@ const Footer = () => {
 					width: "calc(100% - 00px)",
 				}}
 				flexItem
-				
 			></Divider>
 			<Stack
 				direction="column"
@@ -35,6 +34,8 @@ const Footer = () => {
 					color: "white",
 					mt: "20px",
 					p: "20px",
+					alignIems: "center",
+					justifyContent: "center",
 				}}
 				spacing="40px"
 			>
@@ -49,6 +50,7 @@ const Footer = () => {
 					<Typography
 						variant="h4"
 						fontWeight="600"
+						textAlign="center"
 						sx={{
 							fontSize: { xs: "30px", md: "40px" },
 						}}
@@ -59,6 +61,7 @@ const Footer = () => {
 						variant="h5"
 						fontWeight="400"
 						color="rgb(150, 150, 150)"
+						textAlign="center"
 						sx={{
 							fontSize: { xs: "20px", md: "25px" },
 						}}
