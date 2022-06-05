@@ -114,6 +114,40 @@ const Footer = () => {
 						<i class="fa-solid fa-envelope"></i>
 					</a>
 				</Stack>
+				<Stack
+					sx={{
+						display: "flex",
+						flexDirection: "row",
+						alignIems: "center",
+						justifyContent: "center",
+						fontSize: "30px",
+						color: "rgb(150, 150, 150) !important",
+						transition: " 2s all",
+					}}
+					direction="row"
+					spacing="20px"
+				>
+					<Typography
+						variant="h5"
+						fontWeight="500"
+						color="rgb(150, 150, 150)"
+						textAlign="center"
+						sx={{
+							fontSize: { xs: "20px", md: "23px" },
+						}}
+					>
+						Made with Love ♥️ by
+						<a href="https://dugarrishab.github.io/RishabDugar/">
+							{" "}
+							Rishab Dugar{" "}
+						</a>
+						and
+						<a href="https://twitter.com/DevManustweets">
+							{" "}
+							Jyoti Jaiswal{" "}
+						</a>
+					</Typography>
+				</Stack>
 			</Stack>
 		</Box>
 	);
