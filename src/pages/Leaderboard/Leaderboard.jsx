@@ -20,13 +20,22 @@ import { alert } from "../../components/CustomAlert/alert";
 
 const LeaderBoard = () => {
 	const [users, setUsers] = useState(null);
+	const [milestone1, setMilestone1] = useState([]);
+	const [milestone2, setMilestone2] = useState([]);
+	const [milestone3, setMilestone3] = useState([]);
+	const [milestone4, setMilestone4] = useState([]);
+
 	const [getData, setGetData] = useState(0)
 
 	useEffect(() => {
 		async function getUsers() {
 			try {
 				const res = await getLeaderboard();
-				setUsers(res.data.data.users);
+				// setUsers(res.data.data);
+				setMilestone1(res.data.data.milestone1);
+				setMilestone2(res.data.data.milestone2);
+				setMilestone3(res.data.data.milestone3);
+				setMilestone4(res.data.data.milestone4);
 			} catch (err) {
 				console.log(err.response);
 				alert({ message: err.response.data.message, type: "error" });
@@ -150,29 +159,21 @@ const LeaderBoard = () => {
 							overflowY: "",
 						}}
 					>
-						{users !== null
-							? users
-									.filter(
-										(user) =>
-											user.quests >= 40 &&
-											// user.quests < 20 &&
-											user.badges >= 20
-										// user.badges < 10
-									)
-									.map((user) => (
-										<Box
-											sx={{
-												p: "5px",
-												textIndent: "10px",
-												border: "1px solid rgb(150, 150, 150, 0.5)",
-												borderRadius: "5px",
-												my: "5px",
-												bgcolor: "var(--bg)",
-											}}
-										>
-											{user.name}
-										</Box>
-									))
+						{milestone4 !== null
+							? milestone4.map((user) => (
+									<Box
+										sx={{
+											p: "5px",
+											textIndent: "10px",
+											border: "1px solid rgb(150, 150, 150, 0.5)",
+											borderRadius: "5px",
+											my: "5px",
+											bgcolor: "var(--bg)",
+										}}
+									>
+										{user}
+									</Box>
+							  ))
 							: null}
 					</Box>
 
@@ -186,29 +187,21 @@ const LeaderBoard = () => {
 							overflowY: "",
 						}}
 					>
-						{users !== null
-							? users
-									.filter(
-										(user) =>
-											user.quests >= 30 &&
-											// user.quests < 40 &&
-											user.badges >= 15
-										// user.badges < 10
-									)
-									.map((user) => (
-										<Box
-											sx={{
-												p: "5px",
-												textIndent: "10px",
-												border: "1px solid rgb(150, 150, 150, 0.5)",
-												borderRadius: "5px",
-												my: "5px",
-												bgcolor: "var(--bg)",
-											}}
-										>
-											{user.name}
-										</Box>
-									))
+						{milestone3 !== null
+							? milestone3.map((user) => (
+									<Box
+										sx={{
+											p: "5px",
+											textIndent: "10px",
+											border: "1px solid rgb(150, 150, 150, 0.5)",
+											borderRadius: "5px",
+											my: "5px",
+											bgcolor: "var(--bg)",
+										}}
+									>
+										{user}
+									</Box>
+							  ))
 							: null}
 					</Box>
 
@@ -222,29 +215,21 @@ const LeaderBoard = () => {
 							overflowY: "",
 						}}
 					>
-						{users !== null
-							? users
-									.filter(
-										(user) =>
-											user.quests >= 20 &&
-											// user.quests < 30 &&
-											user.badges >= 10
-										// user.badges < 15
-									)
-									.map((user) => (
-										<Box
-											sx={{
-												p: "5px",
-												textIndent: "10px",
-												border: "1px solid rgb(150, 150, 150, 0.5)",
-												borderRadius: "5px",
-												my: "5px",
-												bgcolor: "var(--bg)",
-											}}
-										>
-											{user.name}
-										</Box>
-									))
+						{milestone2 !== null
+							? milestone2.map((user) => (
+									<Box
+										sx={{
+											p: "5px",
+											textIndent: "10px",
+											border: "1px solid rgb(150, 150, 150, 0.5)",
+											borderRadius: "5px",
+											my: "5px",
+											bgcolor: "var(--bg)",
+										}}
+									>
+										{user}
+									</Box>
+							  ))
 							: null}
 					</Box>
 
@@ -258,29 +243,21 @@ const LeaderBoard = () => {
 							overflowY: "scroll",
 						}}
 					>
-						{users !== null
-							? users
-									.filter(
-										(user) =>
-											user.quests >= 10 &&
-											// user.quests < 20 &&
-											user.badges >= 5
-										// user.badges < 10
-									)
-									.map((user) => (
-										<Box
-											sx={{
-												p: "5px",
-												textIndent: "10px",
-												border: "1px solid rgb(150, 150, 150, 0.5)",
-												borderRadius: "5px",
-												my: "5px",
-												bgcolor: "var(--bg)",
-											}}
-										>
-											{user.name}
-										</Box>
-									))
+						{milestone1 !== null
+							? milestone1.map((user) => (
+									<Box
+										sx={{
+											p: "5px",
+											textIndent: "10px",
+											border: "1px solid rgb(150, 150, 150, 0.5)",
+											borderRadius: "5px",
+											my: "5px",
+											bgcolor: "var(--bg)",
+										}}
+									>
+										{user}
+									</Box>
+							  ))
 							: null}
 					</Box>
 				</Stack>
