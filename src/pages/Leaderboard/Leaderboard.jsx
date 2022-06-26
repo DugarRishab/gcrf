@@ -156,7 +156,7 @@ const LeaderBoard = () => {
 						className="no-scrollbar"
 						sx={{
 							maxHeight: "200px",
-							overflowY: "",
+							overflowY: "scroll",
 						}}
 					>
 						{milestone4 !== null
@@ -184,7 +184,7 @@ const LeaderBoard = () => {
 						className="no-scrollbar"
 						sx={{
 							maxHeight: "200px",
-							overflowY: "",
+							overflowY: "scroll",
 						}}
 					>
 						{milestone3 !== null
@@ -212,7 +212,7 @@ const LeaderBoard = () => {
 						className="no-scrollbar"
 						sx={{
 							maxHeight: "200px",
-							overflowY: "",
+							overflowY: "scroll",
 						}}
 					>
 						{milestone2 !== null
